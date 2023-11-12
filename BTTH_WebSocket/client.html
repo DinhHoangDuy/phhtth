@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dự Báo Thời Tiết</title>
+    <!-- Thêm thư viện Chart.js từ một CDN -->
+    <link rel="stylesheet" href="all.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="all.js"></script>
+</head>
+
+<body>
+    <div class = "search_form">
+        <h1 >Dự Báo Thời Tiết</h1>
+        <form>
+            <label for="city">Nhập tên thành phố:</label>
+            <input type="text" id="city" name="city" required>
+            <button type="button" id="btnsearch"  onclick="getWeather() "></button>
+        </form>
+    </div>
+    <div class="content" >
+        <div class="section">
+            <div id="chart1">
+                <!-- <button id="temperature-btn" style="float: right;" class="chart-btn" onclick="showTemperatureChart()">Nhiệt độ</button>
+                <button id="wind-btn" style="float: right;" class="chart-btn" onclick="showWindChart()">Tốc độ gió</button> -->
+            </div>
+            <div id="chart">
+                <center><div id="btn8day" style="font-size: 30px;color: black; font-weight: bold;" >Dự báo 8 ngày<button id="wind-btn" style="float: right;" class="chart-btn" onclick="showWindChart()">Tốc độ gió</button><button id="temperature-btn" style="float: right;" class="chart-btn" onclick="showTemperatureChart()">Nhiệt độ</button></div>
+
+                </center>
+                <canvas id="temperature-chart" width="800" height="400"></canvas>
+                <canvas id="temperature-chart1" width="800" height="400"></canvas>
+            </div>
+            <div class="day8" id="8-day-forecast">
+                <!-- Thêm dự báo 8 ngày ở đây -->
+            </div>
+        </div>
+        <div id="action">
+            <div id="actionno">
+
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

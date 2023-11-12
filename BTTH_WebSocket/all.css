@@ -1,0 +1,166 @@
+/* CSS của bạn */
+body{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.search_form
+{
+  background: linear-gradient(to bottom, #ffffff, #a3d2f0);
+  /* background: white; */
+}
+
+.day8{
+  margin-top: 30px;
+  max-width: 900px; /* Giới hạn chiều rộng của container */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CSS của bạn */
+h1 {
+  font-size: 24px; /* Kích thước phông chữ tiêu đề */
+  text-align: center; /* Căn giữa tiêu đề */
+  margin-top: 20px; /* Khoảng cách phía trên tiêu đề */
+  color: black;
+}
+
+
+form {
+  text-align: center; /* Căn giữa nội dung biểu mẫu */
+  margin-top: 20px; /* Khoảng cách phía trên biểu mẫu */
+}
+
+label {
+  font-size: 18px; /* Kích thước phông chữ cho nhãn */
+}
+
+input[type="text"] {
+  width: 200px; /* Độ rộng của ô nhập liệu */
+  padding: 5px; /* Khoảng cách bên trong ô nhập liệu */
+  border: 1px solid #ccc; /* Viền cho ô nhập liệu */
+  border-radius: 5px; /* Góc bo tròn của ô nhập liệu */
+}
+
+#btnsearch {
+  background-color: #0056b3; /* Màu nền cho nút */
+  color: #fff; /* Màu chữ trắng */
+  border: none;
+  border-radius: 5px; /* Góc bo tròn của nút */
+  padding: 10px 20px; /* Khoảng cách bên trong nút */
+  cursor: pointer;
+  font-size: 18px; /* Kích thước phông chữ cho nút */
+  margin-left: 10px; /* Khoảng cách bên trái của nút so với ô nhập liệu */
+  content: "Xem dự báo";
+  
+}
+
+#btnsearch::before{
+  content: "Xem dự báo"; /* Nội dung gốc của nút */
+  display: block;
+}
+#btnsearch:focus {
+  outline: none; /* Loại bỏ đường viền khi nút được chọn */
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #a3d2f0, #28a8ea);
+  /* background: linear-gradient(to bottom, white, #28a8ea); */
+}
+.section{
+  flex:1
+}
+#action{
+  flex: 1;
+}
+.day-card {
+  flex: 1;
+  font-size: 10px;
+  font-weight: bold;
+  color: black;
+  padding-left: 0px;
+  margin: 5px;
+}
+.weather-info{
+  flex: 1;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+#chart {
+  display: inline-block; /* Thay đổi display thành inline-block để sử dụng chiều rộng và chiều cao */
+  height: 400px; /* Sửa lại chiều cao thành 400px */
+  width: 800px; /* Sửa lại chiều rộng thành 800px */
+}
+
+/* Thêm hiệu ứng hoạt hình cho nút chọn biểu đồ */
+.chart-btn {
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #007bff; /* Màu nền cho nút */
+  color: #fff; /* Màu chữ trắng */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền */
+}
+
+.chart-btn:hover {
+  background-color: #0056b3; /* Màu nền khi di chuột qua */
+}
+
+.chart-btn:focus {
+  outline: none; /* Loại bỏ đường viền khi nút được chọn */
+}
+.tmp{
+  font-size: 30px;color: orange;font-weight: bold;
+}
+
+
+.pill_1
+{
+  display: inline-block; /* Ensures the background shape wraps around the content */
+  background-color: #fec933; /* Set the background color */
+  padding: 5px 5px; /*Adjust padding as needed*/
+  border-radius: 25px; /* Creates the round shape */
+
+  font-size: 30px;
+  color: #ff392b; /* Set the text color */
+  font-weight: bold;
+  /*  style="font-size: 30px;color: black; font-weight: bold;" */
+}
+
+.conclude
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.pill_2
+{
+  /* float: left; */
+  /* display: inline-block; Ensures the background shape wraps around the content */
+  width: 30%;
+  height: fit-content;
+  background-color: #fec933; /* Set the background color */
+  padding: 10px 10px; /* Adjust padding as needed */
+  border-radius: 25px; /* Creates the round shape */
+
+  font-size: 30px;
+  color: #ff392b; /* Set the text color */
+  font-weight: bold;
+  /*  style="font-size: 30px;color: black; font-weight: bold;" */
+}
+.pill_2_p
+{
+  align-self: center;
+  padding: 10px;
+
+  font-size: 20px;
+}
+.chart1
+{
+  text-align: right;
+}

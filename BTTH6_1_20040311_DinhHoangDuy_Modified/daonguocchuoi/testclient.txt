@@ -1,0 +1,49 @@
+import socket
+import os
+
+def get_data_directly():
+    return input("Nhập chuỗi bạn muốn đảo ngược: ")
+
+def get_data_from_file():
+    filename = input("Nhập tên file bạn muốn đọc dữ liệu: ")
+    if not os.path.exists(filename):
+        print(f"File '{filename}' không tồn tại. Vui lòng kiểm tra lại.")
+        return ""
+    with open(filename, "r") as file:
+        return file.read().strip()
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(("localhost", 12345))
+
+while True:
+    print("\nMenu:")
+    print("1. Đảo ngược chuỗi nhập trực tiếp")
+    print("2. Đảo ngược chuỗi trong file có sẵn")
+    print("3. Thoát")
+    choice = input("Chọn (1/2/3): ")
+
+    if choice == "1":
+        data_to_send = get_data_directly()
+        client_socket.send(data_to_send.encode())
+        response = client_socket.recv(1024).decode()
+        print("Dữ liệu sau khi đảo ngược:")
+        print(response)
+
+    elif choice == "2":
+        data_to_send = get_data_from_file()
+        if not data_to_send:
+            continue
+        client_socket.send(data_to_send.encode())
+        response = client_socket.recv(1024).decode()
+        print("Dữ liệu sau khi đảo ngược:")
+        print(response)
+
+    elif choice == "3":
+        print("Thoát.")
+        client_socket.send("EXIT".encode())
+        break
+
+    else:
+        print("Lựa chọn không hợp lệ. Vui lòng thử lại.")
+
+client_socket.close()

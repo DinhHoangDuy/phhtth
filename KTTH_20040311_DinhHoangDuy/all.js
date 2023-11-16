@@ -34,11 +34,11 @@ const forescast =(weatherData) =>{
       const dayCard = document.createElement("div");
       dayCard.classList.add("day-card");
       dayCard.innerHTML = `
-                          <p>thời tiết:${description}</p>
-                          <p>nhiệt độ: ${temperature}°C</p>
-                          <p>độ ẩm: ${humidity}%</p>
-                          <p>tốc độ gió: ${windspeed}m/s</p>
-                          <p>xác xuất mưa: ${Math.floor(pop)}%</p>
+                          <p>Thời tiết: ${description}</p>
+                          <p>Nhiệt độ: ${temperature}°C</p>
+                          <p>Độ ẩm: ${humidity}%</p>
+                          <p>Tốc độ gió: ${windspeed}m/s</p>
+                          <p>Xác xuất mưa: ${Math.floor(pop)}%</p>
                           <img src="${weatherIconSrc}" alt="${description}"> <!-- Thêm hình ảnh thời tiết -->
                       `;
       day8Forecast.appendChild(dayCard);
@@ -70,7 +70,7 @@ const forescastchart= (weatherData)=>{
     }
   });
   updateTemperatureChart(temperatureChart, temperatureCanvas, timeLabels, temperatureData,"Nhiệt độ (°C)","rgba(211, 84, 0,1.0)","rgba(255, 190, 118,1.0)")
-  updateTemperatureChart(temperatureChart1, temperatureCanvas1, timeLabels, windata,"Tốc độ gió(m/s","rgba(9, 132, 227,1.0)","rgba(129, 236, 236,1.0)")
+  updateTemperatureChart(temperatureChart1, temperatureCanvas1, timeLabels, windata,"Tốc độ gió(m/s)","rgba(9, 132, 227,1.0)","rgba(129, 236, 236,1.0)")
 }
 const updateTemperatureChart=(temperatureChart, temperatureCanvas, timeLabels, temperatureData,labels,color1,color2)=> {
   if (temperatureChart) {
@@ -149,14 +149,14 @@ const info=(weatherData)=>{
   weatherInfo.classList.add("weather-info");
   weatherInfo.innerHTML =
   `
-  <center><div class="pill_1"><p>Thời tiết ở : ${weatherData.name}, ${weatherData.sys.country}</p>
+  <center><div class="pill_1"><p>Thời tiết hôm nay ở : ${weatherData.name}, ${weatherData.sys.country}</p>
   </div></center>
   <img height="100"  src="${weatherIconSrc1}" ><br> <!-- Thêm hình ảnh thời tiết -->
   <p>Nhiệt độ: ${weatherData.main.temp}°C</p>
   <p>Thời tiết: ${description}</p>
   <p>Độ ẩm: ${weatherData.main.humidity}%</p>
   <p>Tốc độ gió: ${weatherData.wind.speed} m/s</p>
-  <div class = "conclude"><div class="pill_2"><p>${tam}</p></div>
+  <div class = "conclude"><div class="pill_2"><p style = "text-align: center">${tam}</p></div>
   <div class="pill_2_p">${tam1}</div></div>
 `;
 action.appendChild(weatherInfo);

@@ -6,6 +6,12 @@
     <!-- Thêm thư viện Chart.js từ một CDN -->
     <link rel="stylesheet" href="all.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Link thư viện có chưa font chữ Open Sans từ Google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Link file JS vào -->
     <script src="all.js"></script>
 </head>
 
@@ -21,8 +27,6 @@
     <div class="content" >
         <div class="section">
             <div id="chart1">
-                <!-- <button id="temperature-btn" style="float: right;" class="chart-btn" onclick="showTemperatureChart()">Nhiệt độ</button>
-                <button id="wind-btn" style="float: right;" class="chart-btn" onclick="showWindChart()">Tốc độ gió</button> -->
             </div>
             <div id="chart">
                 <center><div id="btn8day" style="font-size: 30px;color: black; font-weight: bold;" >Dự báo 8 ngày<button id="wind-btn" style="float: right;" class="chart-btn" onclick="showWindChart()">Tốc độ gió</button><button id="temperature-btn" style="float: right;" class="chart-btn" onclick="showTemperatureChart()">Nhiệt độ</button></div>

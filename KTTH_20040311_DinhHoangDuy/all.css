@@ -1,13 +1,11 @@
 /* CSS của bạn */
 body{
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Ubuntu Mono', monospace; */
+  background: linear-gradient(to bottom, #ffffff, #28a8ea);
+  font-family: 'Open Sans', sans-serif;
 }
 
-.search_form
-{
-  background: linear-gradient(to bottom, #ffffff, #a3d2f0);
-  /* background: white; */
-}
 
 .day8{
   margin-top: 30px;
@@ -28,6 +26,7 @@ h1 {
 form {
   text-align: center; /* Căn giữa nội dung biểu mẫu */
   margin-top: 20px; /* Khoảng cách phía trên biểu mẫu */
+  margin-bottom: 30px;
 }
 
 label {
@@ -64,7 +63,7 @@ input[type="text"] {
 .content{
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(to bottom, #a3d2f0, #28a8ea);
+  /* background: linear-gradient(to bottom, #a3d2f0, #28a8ea); */
   /* background: linear-gradient(to bottom, white, #28a8ea); */
 }
 .section{
@@ -75,11 +74,12 @@ input[type="text"] {
 }
 .day-card {
   flex: 1;
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 15px;
+  /* font-weight: bold; */
   color: black;
   padding-left: 0px;
   margin: 5px;
+  border: 1px black;
 }
 .weather-info{
   flex: 1;
@@ -121,13 +121,12 @@ input[type="text"] {
 
 .pill_1
 {
-  display: inline-block; /* Ensures the background shape wraps around the content */
-  background-color: #fec933; /* Set the background color */
-  padding: 5px 5px; /*Adjust padding as needed*/
+  display: inline-block;
+  background-color: #007aff;
+  padding: 0px 5px; /*Adjust padding as needed*/
   border-radius: 25px; /* Creates the round shape */
-
-  font-size: 30px;
-  color: #ff392b; /* Set the text color */
+  font-size: 25px;
+  color: white; /* Set the text color */
   font-weight: bold;
   /*  style="font-size: 30px;color: black; font-weight: bold;" */
 }
@@ -144,21 +143,22 @@ input[type="text"] {
   /* display: inline-block; Ensures the background shape wraps around the content */
   width: 30%;
   height: fit-content;
-  background-color: #fec933; /* Set the background color */
+  padding: 0px;
+  background-color: #007aff; /* Set the background color */
   padding: 10px 10px; /* Adjust padding as needed */
   border-radius: 25px; /* Creates the round shape */
-
   font-size: 30px;
-  color: #ff392b; /* Set the text color */
+  color: white; /* Set the text color */
   font-weight: bold;
   /*  style="font-size: 30px;color: black; font-weight: bold;" */
 }
+
 .pill_2_p
 {
   align-self: center;
   padding: 10px;
-
   font-size: 20px;
+  /* font-family: 'Ubuntu Mono', monospace; */
 }
 .chart1
 {
